@@ -3,11 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ListFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hi" />
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/rvImages"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       tools:listitem="@layout/item_image"
+       app:spanCount="2"
+       app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
 
 </FrameLayout>
